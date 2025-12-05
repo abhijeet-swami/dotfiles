@@ -1,4 +1,3 @@
-````markdown
 # Matugen Rofi Wallpaper Selector
 
 This repository provides a simple setup for wallpaper-based theming using the following tools:
