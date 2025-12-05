@@ -1,0 +1,13 @@
+:root {
+  /* Primary colors */
+  --color00: {{colors.surface.default.hex}}95;
+  --color01: {{colors.primary.default.hex}};
+  --color02: {{colors.on_primary.default.hex}};
+  --color03: {{colors.primary_container.default.hex}};
+  --color04: {{colors.on_primary_container.default.hex}};
+  --color05: {{colors.inverse_primary.default.hex}};
+  --color06: {{colors.primary_fixed.default.hex}};
+  --color07: {{colors.primary_fixed_dim.default.hex}};
+  --color08: {{colors.on_primary_fixed.default.hex}};
+  --color09: {{colors.on_primary_fixed_variant.default.hex}};
+}

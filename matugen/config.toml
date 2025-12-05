@@ -1,0 +1,58 @@
+[config.wallpaper]
+set = true
+command = "swww"
+arguments = ["img", "--transition-type", "wipe", "--all"]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill waybar; waybar &'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/btop.theme'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/cava_theme'
+
+[templates.gtk]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+post_hook = 'ln -sf ~/.config/gtk-3.0/gtk.css ~/.config/gtk-4.0/gtk.css'
+
+[templates.mako]
+input_path = '~/.config/matugen/templates/mako'
+output_path = '~/.config/mako/config'
+post_hook = 'killall mako; mako &'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.toml'
+output_path = '~/.config/starship.toml'
+
+[templates.firefox]
+input_path = '~/.config/matugen/templates/firefox-colors.css'
+output_path = '~/.mozilla/firefox/kjgbodoa.default-release/chrome/colors.css'
+
+[templates.swayosd]
+input_path = '~/.config/matugen/templates/swayosd-colors.css'
+output_path = '~/.config/swayosd/colors.css'
+post_hook = 'killall swayosd-server; swayosd-server -s ~/.config/swayosd/style.css &'
+
+[templates.neovim]
+input_path = './templates/nvim/template.lua'
+output_path = '~/.config/nvim/matugen.lua'
+post_hook = 'pkill -SIGUSR1 nvim'

@@ -1,0 +1,65 @@
+layer=overlay
+
+# STYLE
+width=220
+margin=5,18,0
+padding=7
+border-size=1
+border-radius=10
+progress-color={{colors.primary.default.hex}}
+max-icon-size=36
+icon-path=/usr/share/icons/WhiteSur-dark:/usr/share/icons/WhiteSur:/usr/share/icons/Adwaita:/usr/share/icons/hicolor
+icon-location=right
+format=<b>%s</b>\n%b
+text-alignment=left
+anchor=top-right
+
+# CRITERIA
+## urgency
+[urgency=low]
+default-timeout=2500
+background-color={{colors.surface_dim.default.hex}}80
+border-color={{colors.outline_variant.default.hex}}
+text-color={{colors.on_surface.default.hex}}
+
+[urgency=normal]
+default-timeout=8000
+background-color={{colors.on_primary.default.hex}}80
+border-color={{colors.outline.default.hex}}
+text-color={{colors.on_surface.default.hex}}
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message-new-instant.oga
+
+[urgency=critical]
+default-timeout=0
+background-color={{colors.error.default.hex}}80
+border-color={{colors.error_container.default.hex}}
+text-color={{colors.on_error.default.hex}}
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/dialog-warning.oga
+
+## app-name
+[app-name=Pomodoro]
+anchor=top-center
+format=%s\n%b
+group-by=app-name
+default-timeout=1000
+on-notify=exec echo hello
+
+[app-name=Geary]
+format=Geary\n%s: %b
+
+[app-name=control]
+format=<b>%s</b>\n%b
+group-by=summary
+anchor=top-center
+text-alignment=center
+
+[app-name=batsignal]
+format=<b>%s</b>\n%b
+group-by=app-name
+
+[app-name=udiskie]
+default-timeout=2500
+
+## body
+[body=""]
+format=%s\n%b
